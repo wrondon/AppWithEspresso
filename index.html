@@ -31,10 +31,18 @@
         <h1>
 <a id="overview" class="anchor" href="#overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview:</h1>
 
-<p>Show the usage of the testing library <strong><code>èspresso</code></strong></p>
+<p>Show the usage of the testing library <strong>"espresso"</strong></p>
 
 <h2>
-<a id="versions" class="anchor" href="#versions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Versions:</h2>
+<a id="code" class="anchor" href="#code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code:</h2>
+
+<div class="highlight highlight-java"><pre><span class="pl-s">public</span> <span class="pl-st">void</span> testSimpleClickAndCheckText() {
+        onView(withId(<span class="pl-stj">R</span><span class="pl-k">.</span>id<span class="pl-k">.</span>button_simple))
+                .perform(click());
+
+        onView(withId(<span class="pl-stj">R</span><span class="pl-k">.</span>id<span class="pl-k">.</span>text_simple))
+                .check(matches(withText(<span class="pl-s1"><span class="pl-pds">"</span>Hello Espresso!<span class="pl-pds">"</span></span>)));
+    }</pre></div>
 
 <h2>
 <a id="comments" class="anchor" href="#comments" aria-hidden="true"><span class="octicon octicon-link"></span></a>Comments:</h2>

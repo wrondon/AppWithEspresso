@@ -46,6 +46,16 @@
                 .check(matches(withText(<span class="pl-s1"><span class="pl-pds">"</span>Hello Espresso!<span class="pl-pds">"</span></span>)));
     }</pre></div>
 
+<p>and the Setup for the this test was just ...</p>
+
+<pre><code> @Override
+    public void setUp() throws Exception {
+        super.setUp();
+        // Espresso will not launch our activity for us, we must launch it via getActivity().
+        getActivity();
+    }
+</code></pre>
+
 <h2>
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References:</h2>
 

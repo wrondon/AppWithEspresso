@@ -31,19 +31,20 @@
         <h1>
 <a id="overview" class="anchor" href="#overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview:</h1>
 
-<p>Show the usage of the testing library <strong>"espresso"</strong>, which is now part of the Android Support Repository.</p>
+<p>Espresso is: <strong>"... a simple API for writing reliable UI tests ..."</strong>
+Show the usage of the testing library <strong>"espresso"</strong>, which is now part of the Android Support Repository.</p>
 
 <h2>
 <a id="code" class="anchor" href="#code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code:</h2>
 
 <p>A test is just as simple as ...</p>
 
-<div class="highlight highlight-java"><pre><span class="pl-s">public</span> <span class="pl-st">void</span> testSimpleClickAndCheckText() {
-        onView(withId(<span class="pl-stj">R</span><span class="pl-k">.</span>id<span class="pl-k">.</span>button_simple))
+<div class="highlight highlight-java"><pre><span class="pl-k">public</span> <span class="pl-k">void</span> testSimpleClickAndCheckText() {
+        onView(withId(<span class="pl-smi">R</span><span class="pl-k">.</span>id<span class="pl-k">.</span>button_simple))
                 .perform(click());
 
-        onView(withId(<span class="pl-stj">R</span><span class="pl-k">.</span>id<span class="pl-k">.</span>text_simple))
-                .check(matches(withText(<span class="pl-s1"><span class="pl-pds">"</span>Hello Espresso!<span class="pl-pds">"</span></span>)));
+        onView(withId(<span class="pl-smi">R</span><span class="pl-k">.</span>id<span class="pl-k">.</span>text_simple))
+                .check(matches(withText(<span class="pl-s"><span class="pl-pds">"</span>Hello Espresso!<span class="pl-pds">"</span></span>)));
     }</pre></div>
 
 <p>and the Setup for the this test was just ...</p>
